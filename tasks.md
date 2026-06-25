@@ -1,19 +1,22 @@
-# Tareas Pendientes (Backlog)
+# Hoja de Ruta: Migración a WordPress (Custom Theme)
 
-## 1. Arquitectura Backend (WordPress)
-- [ ] **Definición de Arquitectura:** Decidir si la Tienda y el Campus vivirán en subdominios (ej. `tienda.vendaval.com`) con una plantilla de WordPress, o si se construirá una integración **Headless** (React consumiendo la API de WooCommerce y el LMS).
-- [ ] **E-learning (Campus):** Investigar e instalar un plugin LMS en WordPress (ej. LearnDash, TutorLMS o Sensei) para gestionar cursos y alumnos.
-- [ ] **E-commerce (WooCommerce):** Configurar WooCommerce para la venta de productos físicos y suscripciones/accesos a los cursos del Campus.
+Dado el requerimiento de negocio de usar **100% WordPress** para aprovechar soluciones nativas (WooCommerce, LMS, Carritos), la estrategia técnica cambia. No usaremos React en producción, sino que **convertiremos nuestro código limpio en un Tema de WordPress a medida (Custom Theme)**.
 
-## 2. Revisión Visual y Pruebas
-- [ ] **Cross-Browser Testing:** Verificar que el sitio se vea idéntico en Chrome, Firefox, Safari y Edge.
-- [ ] **Pruebas en Dispositivos Reales:** Probar la web navegando desde un celular y tablet para validar los breakpoints.
-- [ ] **Verificación de Enlaces:** Chequear que todos los enlaces internos funcionen.
+El trabajo que hicimos hoy fue el paso más difícil y crítico: transformar los diseños de Figma en HTML y CSS responsivo y limpio. Ahora usaremos ese código como la "piel" de nuestro WordPress.
 
-## 3. Refactorización
-- [ ] **Extraer el Footer:** Crear un `<Footer />` global para evitar tener el HTML repetido al final de cada página.
-- [ ] **Componentización:** Convertir grillas de productos o banners recurrentes en componentes de React.
+## FASE 1: Creación del Tema de WordPress (Theme)
+- [ ] **Estructura Base:** Crear la estructura de un tema de WordPress (`style.css`, `index.php`, `functions.php`).
+- [ ] **Header y Footer Globales:** Tomar nuestro componente `<Navbar />` y nuestro CSS global, y pasarlos a `header.php` y `footer.php` para que WordPress los inyecte en todas las páginas.
+- [ ] **Plantillas de Páginas Estáticas:** Convertir el HTML limpio de `HomeContent`, `NosotrasContent`, `ElTallerContent` en plantillas de página (`page-home.php`, `page-nosotras.php`) dentro de WordPress.
 
-## 4. SEO y Rendimiento
-- [ ] **Etiquetas Meta y SEO:** Agregar títulos dinámicos y descripciones para cada ruta.
-- [ ] **Optimización de Imágenes:** Convertir imágenes pesadas exportadas por Figma a formatos web modernos (`WebP`/`AVIF`).
+## FASE 2: Integración de Tienda (WooCommerce)
+- [ ] **Instalación:** Configurar WooCommerce en el servidor de WordPress.
+- [ ] **Estilización (Theming):** Sobrescribir los estilos nativos de WooCommerce (botones, grillas de productos, carrito) usando nuestro `index.css` y la tipografía `Instrument Sans` para que el e-commerce luzca exactamente como el diseño de Figma.
+
+## FASE 3: Integración del Campus (E-learning)
+- [ ] **Selección de Plugin LMS:** Instalar LearnDash, Tutor LMS o Sensei.
+- [ ] **Personalización Visual:** Asegurarnos de que las páginas de los cursos, lecciones y el perfil del alumno hereden el diseño global de la web (Header, Footer, colores, tipografía).
+
+## FASE 4: Funcionalidad y SEO
+- [ ] **Formularios de Contacto:** Reemplazar el formulario estático de Figma por un plugin como Contact Form 7 o WPForms, estilizado con nuestro CSS.
+- [ ] **Gestión de Menús:** Conectar el `header.php` con el sistema nativo de menús de WordPress (`wp_nav_menu`) para que el cliente pueda cambiar los enlaces desde el panel de administrador.
