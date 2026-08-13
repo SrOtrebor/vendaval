@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Template Name: Formacion
 */
@@ -42,7 +42,7 @@ get_header(); ?>
                     <div class="course-time">1 clase</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Introducción a la serigrafía</h4>
+                    <h4>Nivel 1 - Introducción a la serigrafía</h4>
                     <p>El punto de partida. Aprendés todo el proceso desde cero y hacés tus primeras estampas. Incluye preimpresión y guía para emprender.</p>
                     <a href="<?php echo get_permalink(89); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
@@ -58,7 +58,7 @@ get_header(); ?>
                     <div class="course-time" style="background-color: var(--color-red); color: white;">LISTA DE ESPERA</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Registro a varias tintas</h4>
+                    <h4>Nivel 2 - Registro a varias tintas</h4>
                     <p>Un taller técnico para entender cómo alinear colores y poder estampar diseños a varias tintas con precisión.</p>
                     <a href="<?php echo home_url('/contacto'); ?>" class="link-arrow text-small">Anotarse <span class="arrow-icon">&rarr;</span></a>
                 </div>
@@ -90,7 +90,7 @@ get_header(); ?>
                     <div class="course-time">4 clases</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Introducción Personalizado</h4>
+                    <h4>Introducción a la Serigrafía Personalizado</h4>
                     <p>Un proceso de trabajo para desarrollar tu propia idea y llevarla a un producto estampado de forma personalizada.</p>
                     <a href="<?php echo get_permalink(92); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
