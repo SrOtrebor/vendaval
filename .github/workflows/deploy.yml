@@ -25,5 +25,5 @@ jobs:
         set ssl:verify-certificate no
         set ftp:passive-mode true
         open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        mirror -R --verbose ./vendaval-theme/ /public_html/wp-content/themes/vendaval-theme/
+        mirror -R --verbose ./vendaval-theme/ /wp-content/themes/vendaval-theme/
         "
