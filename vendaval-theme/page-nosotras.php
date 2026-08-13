@@ -44,7 +44,7 @@ get_header(); ?>
                     <!-- IMAGEN DE GISE (Ilustración) -->
                     <img class="illus-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/52360985688ea46afe4dd7e6da1526e5fad87566.png" alt="Gise">
                     <!-- FOTO REAL DE GISE (Reemplazar el atributo src por la URL de la foto) -->
-                    <img class="photo-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fotos/Retrato_Gise.jpg" alt="Gise Foto Real">
+                    <img class="photo-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fotos/Retrato_Gise_small.jpg" alt="Gise Foto Real">
                 </div>
                 <p class="text-body-small">
                     Gise, es diseñadora textil y está enfocada en bajar las ideas a la realidad: pensar la técnica, los materiales y cada detalle que hace que un proyecto funcione.
@@ -56,7 +56,7 @@ get_header(); ?>
                     <!-- IMAGEN DE CARO (Ilustración) -->
                     <img class="illus-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5f3686a7c3679d5281be27284f499a5e9395b0f0.png" alt="Caro">
                     <!-- FOTO REAL DE CARO (Reemplazar el atributo src por la URL de la foto) -->
-                    <img class="photo-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fotos/Retrato_Caro.jpg" alt="Caro Foto Real">
+                    <img class="photo-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fotos/Retrato_Caro_small.jpg" alt="Caro Foto Real">
                 </div>
                 <p class="text-body-small">
                     Caro estudió artes visuales y tiene una mirada muy creativa: propone, activa rápido y encuentra caminos para que las ideas tomen forma.

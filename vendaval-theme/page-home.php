@@ -7,8 +7,8 @@ get_header();
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <video class="hero-bg hero-bg-desktop" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner vendaval desktop.mp4" autoplay loop muted playsinline></video>
-        <video class="hero-bg hero-bg-mobile" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner vendaval mobile.mp4" autoplay loop muted playsinline></video>
+        <video class="hero-bg hero-bg-desktop" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner_vendaval_desktop.mp4" autoplay loop muted playsinline></video>
+        <video class="hero-bg hero-bg-mobile" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner_vendaval_mobile.mp4" autoplay loop muted playsinline></video>
         <img class="hero-stamp" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/9ec2f7c73909c649532d8961e13dab2928bab720.png" alt="Taller Vendaval Stamp">
         <div class="hero-content container">
             <h1 class="text-title">Oficio y Corazón &lt;3<br>Serigrafía hecha con tiempo,<br>experiencia y cuidado.</h1>
