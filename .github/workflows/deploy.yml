@@ -21,6 +21,6 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
         local-dir: ./vendaval-theme/
         server-dir: /public_html/wp-content/themes/vendaval-theme/
-        danger-action: true
