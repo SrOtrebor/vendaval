@@ -34,45 +34,75 @@ if ( (empty($cuotas_texto) || empty($precio_transferencia)) && has_term('packs-c
     }
 }
 ?>
-<div <?php wc_product_class( 'product-card', $product ); ?>>
-    <a href="<?php echo esc_url( $product->get_permalink() ); ?>" style="text-decoration: none; color: inherit; display: block;">
-        
-        <div class="product-image">
-            <?php 
-            /**
-             * Hook: woocommerce_before_shop_loop_item_title.
-             *
-             * @hooked woocommerce_show_product_loop_sale_flash - 10
-             * @hooked woocommerce_template_loop_product_thumbnail - 10
-             */
-            do_action( 'woocommerce_before_shop_loop_item_title' ); 
-            ?>
-        </div>
-        
-        <h3 class="product-title"><?php echo esc_html( get_the_title() ); ?></h3>
-        
-        <div class="product-price">
-            <?php echo $product->get_price_html(); ?>
-        </div>
-
-        <?php if ( $cuotas_texto ) : ?>
-            <div class="product-installments"><?php echo wp_kses_post($cuotas_texto); ?></div>
-        <?php endif; ?>
-
-        <?php if ( $precio_transferencia ) : ?>
-            <div class="product-divider"></div>
-            <div class="product-transfer"><?php echo wp_kses_post($precio_transferencia); ?></div>
-        <?php endif; ?>
-
-    </a>
+<?php if ( has_term('packs-cursos', 'product_cat', $product->get_id()) ) : ?>
     
-    <?php
-    /**
-     * Hook: woocommerce_after_shop_loop_item.
-     *
-     * @hooked woocommerce_template_loop_product_link_close - 5
-     * @hooked woocommerce_template_loop_add_to_cart - 10
-     */
-    do_action( 'woocommerce_after_shop_loop_item' );
-    ?>
-</div>
+    <div <?php wc_product_class( 'course-card', $product ); ?>>
+        <div class="course-card-top">
+            <div class="course-label">+ pack +</div>
+            <h3><?php echo esc_html( get_the_title() ); ?></h3>
+            <img src="<?php echo esc_url( get_the_post_thumbnail_url( $product->get_id(), 'large' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
+            <div class="course-mode">PRODUCTO</div>
+            <div class="course-time">FÍSICO</div>
+        </div>
+        <div class="course-card-bottom">
+            <h4><?php echo esc_html( get_the_title() ); ?></h4>
+            <p><?php echo wp_kses_post( $product->get_short_description() ); ?></p>
+            <div style="font-weight: bold; margin-bottom: 10px; color: var(--color-black);">
+                <?php echo $product->get_price_html(); ?>
+            </div>
+            <?php if ( $cuotas_texto ) : ?>
+                <div class="product-installments" style="margin-bottom: 5px;"><?php echo wp_kses_post($cuotas_texto); ?></div>
+            <?php endif; ?>
+            <?php if ( $precio_transferencia ) : ?>
+                <div class="product-transfer" style="margin-bottom: 15px; font-weight: normal; font-size: 14px;"><?php echo wp_kses_post($precio_transferencia); ?></div>
+            <?php endif; ?>
+            <a href="<?php echo esc_url( $product->get_permalink() ); ?>" class="link-arrow text-small">Ver detalle <span class="arrow-icon">&rarr;</span></a>
+        </div>
+    </div>
+
+<?php else : ?>
+
+    <div <?php wc_product_class( 'product-card', $product ); ?>>
+        <a href="<?php echo esc_url( $product->get_permalink() ); ?>" style="text-decoration: none; color: inherit; display: block;">
+            
+            <div class="product-image">
+                <?php 
+                /**
+                 * Hook: woocommerce_before_shop_loop_item_title.
+                 *
+                 * @hooked woocommerce_show_product_loop_sale_flash - 10
+                 * @hooked woocommerce_template_loop_product_thumbnail - 10
+                 */
+                do_action( 'woocommerce_before_shop_loop_item_title' ); 
+                ?>
+            </div>
+            
+            <h3 class="product-title"><?php echo esc_html( get_the_title() ); ?></h3>
+            
+            <div class="product-price">
+                <?php echo $product->get_price_html(); ?>
+            </div>
+
+            <?php if ( $cuotas_texto ) : ?>
+                <div class="product-installments"><?php echo wp_kses_post($cuotas_texto); ?></div>
+            <?php endif; ?>
+
+            <?php if ( $precio_transferencia ) : ?>
+                <div class="product-divider"></div>
+                <div class="product-transfer"><?php echo wp_kses_post($precio_transferencia); ?></div>
+            <?php endif; ?>
+
+        </a>
+        
+        <?php
+        /**
+         * Hook: woocommerce_after_shop_loop_item.
+         *
+         * @hooked woocommerce_template_loop_product_link_close - 5
+         * @hooked woocommerce_template_loop_add_to_cart - 10
+         */
+        do_action( 'woocommerce_after_shop_loop_item' );
+        ?>
+    </div>
+
+<?php endif; ?>
