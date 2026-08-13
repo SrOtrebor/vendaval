@@ -20,7 +20,7 @@ $cuotas_texto = get_field('producto_cuotas_texto', $product->get_id());
 $precio_transferencia = get_field('producto_precio_transferencia', $product->get_id());
 
 // Fallback for packs if no ACF fields are set
-if ( (empty($cuotas_texto) || empty($precio_transferencia)) && has_term('packs-cursos', 'product_cat', $product->get_id()) ) {
+if ( (empty($cuotas_texto) || empty($precio_transferencia)) && has_term(array('packs-cursos', 'packs-de-cursos'), 'product_cat', $product->get_id()) ) {
     $price_val = $product->get_price();
     if ($price_val) {
         if (empty($cuotas_texto)) {
@@ -34,15 +34,15 @@ if ( (empty($cuotas_texto) || empty($precio_transferencia)) && has_term('packs-c
     }
 }
 ?>
-<?php if ( has_term('packs-cursos', 'product_cat', $product->get_id()) ) : ?>
+<?php if ( has_term(array('packs-cursos', 'packs-de-cursos'), 'product_cat', $product->get_id()) ) : ?>
     
     <div <?php wc_product_class( 'course-card', $product ); ?>>
-        <div class="course-card-top">
-            <div class="course-label">+ pack +</div>
-            <h3><?php echo esc_html( get_the_title() ); ?></h3>
-            <img src="<?php echo esc_url( get_the_post_thumbnail_url( $product->get_id(), 'large' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
-            <div class="course-mode">PRODUCTO</div>
-            <div class="course-time">FÍSICO</div>
+        <div class="course-card-top pack-top" style="padding: 20px;">
+            <div class="course-label" style="display: block; margin-bottom: 15px;">+ pack +</div>
+            <h3 style="display: block; margin-bottom: 20px; font-size: 24px; color: #ffffff; font-weight: 400;"><?php echo esc_html( get_the_title() ); ?></h3>
+            <img src="<?php echo esc_url( get_the_post_thumbnail_url( $product->get_id(), 'large' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" style="border-radius: 8px;">
+            <div class="course-mode" style="display: none;">PRODUCTO</div>
+            <div class="course-time" style="display: none;">FÍSICO</div>
         </div>
         <div class="course-card-bottom">
             <h4><?php echo esc_html( get_the_title() ); ?></h4>
