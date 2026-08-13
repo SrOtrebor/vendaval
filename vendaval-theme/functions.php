@@ -297,3 +297,30 @@ function vendaval_tutor_multi_enrollment( $order_id ) {
         }
     }
 }
+// Traducir textos de Tutor LMS forzosamente a español
+add_filter( 'gettext', 'vendaval_translate_tutor_lms', 10, 3 );
+function vendaval_translate_tutor_lms( $translated_text, $text, $domain ) {
+    if ( 'tutor' === $domain || 'tutor-pro' === $domain ) {
+        switch ( $translated_text ) {
+            case 'Course Info': return 'Información del Curso';
+            case 'About Course': return 'Sobre el Curso';
+            case 'What Will I Learn?': return '¿Qué aprenderé?';
+            case 'Course Content': return 'Contenido del Curso';
+            case 'Curriculum': return 'Plan de Estudios';
+            case 'Enroll Now': return 'Inscribirme Ahora';
+            case 'Add to cart': return 'Agregar al carrito';
+            case 'Instructor': return 'Profesora';
+            case 'Requirements': return 'Requisitos';
+            case 'Target Audience': return 'Público Objetivo';
+            case 'Materials Included': return 'Materiales Incluidos';
+            case 'Start Course': return 'Comenzar Curso';
+            case 'Continue Course': return 'Continuar Curso';
+            case 'Complete Course': return 'Completar Curso';
+            case 'Dashboard': return 'Mi Campus';
+            case 'Enrolled Courses': return 'Mis Cursos';
+            case 'Active Courses': return 'Cursos Activos';
+            case 'Completed Courses': return 'Cursos Completados';
+        }
+    }
+    return $translated_text;
+}

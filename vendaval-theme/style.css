@@ -1828,3 +1828,32 @@ select.form-control {
 /* Trigger SFTP deploy */
 /* LFTP deploy trigger */
 /* LFTP deploy trigger 2 */
+
+/* ==========================================================================
+   TUTOR LMS OVERRIDES
+   ========================================================================== */
+:root {
+  --tutor-color-primary: #334766 !important;
+  --tutor-color-secondary: #334766 !important;
+  --tutor-color-primary-hover: #1f2b3d !important;
+}
+
+/* Force Instrument Sans on everything inside Tutor */
+.tutor-wrap, .tutor-wrap * {
+  font-family: var(--font-main) !important;
+}
+
+/* Fix header cutoff for Tutor pages */
+.tutor-page-wrap,
+.tutor-course-single-wrap,
+.tutor-dashboard-wrap,
+.tutor-wrap {
+  padding-top: var(--header-height) !important;
+  margin-top: 0 !important;
+}
+
+/* Campus Title Font if it is outside tutor-wrap */
+.tutor-page-title,
+.tutor-dashboard-header h1 {
+  font-family: var(--font-main) !important;
+}
