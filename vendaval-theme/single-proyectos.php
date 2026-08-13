@@ -168,18 +168,21 @@ $instagram_link = get_post_meta(get_the_ID(), 'proyecto_instagram', true);
                 ?>
                 <!-- Proyecto 1 -->
                 <div class="otro-proyecto-card">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/97b8c0670d59184877ac0f85e15897ebb89eb86a.png" alt="Otros Proyectos Izquierda">
-                    <a href="#" class="link-arrow text-body-small" style="margin-top: 15px;">Ver proyecto <span class="arrow-icon">&rarr;</span></a>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/97b8c0670d59184877ac0f85e15897ebb89eb86a.png" alt="Baradero">
+                    <h3 class="text-body" style="margin-top: 15px; margin-bottom: 5px;">Baradero</h3>
+                    <a href="https://www.instagram.com/reel/DJrc7UPxIKz/" target="_blank" class="link-arrow text-body-small">Ver en Instagram <span class="arrow-icon">&rarr;</span></a>
                 </div>
                 <!-- Proyecto 2 -->
                 <div class="otro-proyecto-card">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/ad08668cc1de157129a5f9aa09d4628d866ddc64.png" alt="Otros Proyectos Medio">
-                    <a href="#" class="link-arrow text-body-small" style="margin-top: 15px;">Ver proyecto <span class="arrow-icon">&rarr;</span></a>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/ad08668cc1de157129a5f9aa09d4628d866ddc64.png" alt="Fábrica de Estampas">
+                    <h3 class="text-body" style="margin-top: 15px; margin-bottom: 5px;">Fábrica de Estampas</h3>
+                    <a href="https://www.instagram.com/reel/CiOP5E7MI9P/" target="_blank" class="link-arrow text-body-small">Ver en Instagram <span class="arrow-icon">&rarr;</span></a>
                 </div>
                 <!-- Proyecto 3 -->
                 <div class="otro-proyecto-card">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/f7a8d3463ebb5ada54d9ccc5ab9d9ee2021bda74.png" alt="Otros Proyectos Derecha">
-                    <a href="#" class="link-arrow text-body-small" style="margin-top: 15px;">Ver proyecto <span class="arrow-icon">&rarr;</span></a>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/f7a8d3463ebb5ada54d9ccc5ab9d9ee2021bda74.png" alt="Feria Juntas">
+                    <h3 class="text-body" style="margin-top: 15px; margin-bottom: 5px;">Feria Juntas</h3>
+                    <a href="https://www.instagram.com/p/DMioHdKx43d/" target="_blank" class="link-arrow text-body-small">Ver en Instagram <span class="arrow-icon">&rarr;</span></a>
                 </div>
                 <?php
             endif;
