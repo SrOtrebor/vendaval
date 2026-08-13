@@ -143,7 +143,7 @@ get_header(); ?>
                     <div class="course-time">A tu ritmo</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Guía de Costos</h4>
+                    <h4>Guía para emprender costos</h4>
                     <p>Aprende a calcular tus costos y llevar adelante tu emprendimiento con éxito.</p>
                     <a href="<?php echo get_permalink(95); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
@@ -159,7 +159,7 @@ get_header(); ?>
                     <div class="course-time">A tu ritmo</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Nivel 1</h4>
+                    <h4>Nivel 1 - Introducción a la serigrafía</h4>
                     <p>La introducción a la serigrafía desde la comodidad de tu casa.</p>
                     <a href="<?php echo get_permalink(96); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
@@ -175,7 +175,7 @@ get_header(); ?>
                     <div class="course-time">A tu ritmo</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Nivel 2 Registros</h4>
+                    <h4>Nivel 2 - Registro a varias tintas virtual</h4>
                     <p>Registros a varias tintas de forma virtual, profundizando la técnica.</p>
                     <a href="<?php echo get_permalink(97); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
