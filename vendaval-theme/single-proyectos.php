@@ -4,6 +4,10 @@
  */
 get_header(); 
 
+// Include Swiper JS & CSS
+wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+
 // Fetch ACF fields
 $hero_desktop = get_field('proyecto_hero_desktop');
 $hero_tablet = get_field('proyecto_hero_tablet');
@@ -27,6 +31,7 @@ $f6 = get_field('proyecto_foto_6');
 $f6_pos = get_field('proyecto_f6_posicion') ?: 'center';
 
 $tags = get_field('proyecto_tags');
+$instagram_link = get_post_meta(get_the_ID(), 'proyecto_instagram', true);
 ?>
 
 <main id="primary" class="site-main proyectos-page">
@@ -46,8 +51,14 @@ $tags = get_field('proyecto_tags');
                 </div>
                 
                 <?php if ($tags): ?>
-                <div class="proyecto-metadata text-body-small" style="color: var(--text-secondary); line-height: 1.5;">
+                <div class="proyecto-metadata text-body-small" style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 30px;">
                     <?php echo nl2br(esc_html($tags)); ?>
+                </div>
+                <?php endif; ?>
+
+                <?php if ($instagram_link): ?>
+                <div>
+                    <a href="<?php echo esc_url($instagram_link); ?>" target="_blank" rel="noopener noreferrer" class="link-arrow text-body-small">Ver más en Instagram <span class="arrow-icon">&rarr;</span></a>
                 </div>
                 <?php endif; ?>
             </div>
@@ -183,5 +194,80 @@ $tags = get_field('proyecto_tags');
         </div>
     </div>
 </main>
+
+<style>
+/* Swiper fixes for WP Gallery */
+.swiper-button-next, .swiper-button-prev { color: var(--color-primary, #000); }
+.swiper-pagination-bullet-active { background: var(--color-primary, #000); }
+.gallery-item img { border: none !important; width: 100%; height: auto; display: block; }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (typeof Swiper !== 'undefined') {
+        var galleries = document.querySelectorAll(".gallery");
+        galleries.forEach(function(gallery, index) {
+            gallery.classList.add("swiper", "mySwiper-" + index);
+            gallery.style.overflow = "hidden";
+            gallery.style.position = "relative";
+            gallery.style.width = "100%";
+            gallery.style.paddingBottom = "40px"; // for pagination
+            
+            var wrapper = document.createElement("div");
+            wrapper.className = "swiper-wrapper";
+            
+            var items = gallery.querySelectorAll(".gallery-item");
+            items.forEach(function(item) {
+                item.classList.add("swiper-slide");
+                item.style.width = "auto";
+                item.style.margin = "0"; 
+                item.style.display = "flex";
+                item.style.alignItems = "center";
+                
+                var link = item.querySelector("a");
+                if (link) {
+                    link.addEventListener("click", function(e) {
+                        e.preventDefault();
+                    });
+                    link.style.cursor = "default";
+                }
+                
+                wrapper.appendChild(item);
+            });
+            
+            gallery.innerHTML = '';
+            gallery.appendChild(wrapper);
+            
+            var nextBtn = document.createElement("div");
+            nextBtn.className = "swiper-button-next";
+            var prevBtn = document.createElement("div");
+            prevBtn.className = "swiper-button-prev";
+            gallery.appendChild(nextBtn);
+            gallery.appendChild(prevBtn);
+            
+            var pagination = document.createElement("div");
+            pagination.className = "swiper-pagination";
+            gallery.appendChild(pagination);
+            
+            new Swiper(".mySwiper-" + index, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 40 },
+                },
+            });
+        });
+    }
+});
+</script>
 
 <?php get_footer(); ?>

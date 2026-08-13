@@ -8,7 +8,7 @@ get_header(); ?>
     
     <div class="contacto-hero">
         <div class="contacto-hero-bg">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/0d9ba540fb09dd45352ca23253e97102a65e8322.png" alt="Hero Contacto">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/contacto.jpg" alt="Hero Contacto">
         </div>
         <div class="container" style="position: relative; height: 100%; display: flex; align-items: center; z-index: 2;">
             <div class="contacto-hero-text">

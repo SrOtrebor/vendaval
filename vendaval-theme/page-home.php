@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /* Template Name: Home */
 get_header();
 ?>
@@ -7,7 +7,8 @@ get_header();
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <img class="hero-bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/9518e0be43ad32e108d216e519a03c50e82f3afb.png" alt="Vendaval Background">
+        <video class="hero-bg hero-bg-desktop" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner vendaval desktop.mp4" autoplay loop muted playsinline></video>
+        <video class="hero-bg hero-bg-mobile" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/Banner vendaval mobile.mp4" autoplay loop muted playsinline></video>
         <img class="hero-stamp" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/9ec2f7c73909c649532d8961e13dab2928bab720.png" alt="Taller Vendaval Stamp">
         <div class="hero-content container">
             <h1 class="text-title">Oficio y Corazón &lt;3<br>Serigrafía hecha con tiempo,<br>experiencia y cuidado.</h1>
@@ -36,7 +37,7 @@ get_header();
             <!-- Producción -->
             <div class="info-card">
                 <div class="image-wrapper">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/809baaa9c6d42a33b1a9bf6a62ce3f2f76c66e38.png" alt="Producción" style="filter: grayscale(100%);">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/producción.jpg" alt="Producción">
                     <div class="image-overlay">
                         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
                         <span>conocé más</span>
@@ -51,7 +52,7 @@ get_header();
             <!-- Formación -->
             <div class="info-card">
                 <div class="image-wrapper">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/group.png" alt="Formación">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/formacion.jpg" alt="Formación">
                     <div class="image-overlay">
                         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
                         <span>conocé más</span>

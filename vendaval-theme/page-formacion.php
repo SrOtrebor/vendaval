@@ -28,25 +28,23 @@ get_header(); ?>
         </div>
 
         <!-- Title before grid -->
-        <h2 class="formacion-title">Serigrafía se aprende haciendo.</h2>
+        <h2 class="formacion-title">Modalidad Presencial</h2>
 
-        <!-- Grid of Courses -->
-        <div class="formacion-grid">
+        <div class="formacion-grid" style="margin-bottom: 60px;">
             
             <!-- Curso 1 -->
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>INTRODUCCIÓN<br>A LA SERIGRAFÍA</h3>
-                    <!-- REEMPLAZAR SRC CON EL ICONO CORRECTO -->
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Introducción">
+                    <h3>NIVEL 1<br>INTRODUCCIÓN</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cursos/Portadas de cursos presenciales_Introducción a la serigrafía.jpg" alt="Introducción a la serigrafía">
                     <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 13:00</div>
+                    <div class="course-time">1 clase</div>
                 </div>
                 <div class="course-card-bottom">
                     <h4>Introducción a la serigrafía</h4>
-                    <p>El punto de partida. Aprendés todo el proceso desde cero y hacés tus primeras estampas. ¿Nunca estampaste? Este es el lugar para empezar.</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <p>El punto de partida. Aprendés todo el proceso desde cero y hacés tus primeras estampas. Incluye preimpresión y guía para emprender.</p>
+                    <a href="<?php echo get_permalink(89); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
 
@@ -54,32 +52,31 @@ get_header(); ?>
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>REGISTROS A<br>VARIAS TINTAS</h3>
-                    <!-- REEMPLAZAR SRC CON EL ICONO CORRECTO -->
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/fe2242eb1ac0c07f171fdce0f83f810f223e988e.png" alt="Registros">
+                    <h3>NIVEL 2<br>REGISTROS</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cursos/Portadas de cursos presenciales_Varias tintas.jpg" alt="Registro a varias tintas">
                     <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 13:00</div>
+                    <div class="course-time" style="background-color: var(--color-red); color: white;">LISTA DE ESPERA</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Registros a varias tintas</h4>
-                    <p>Un taller técnico para entender cómo alinear colores y poder estampar diseños a varias tintas con precisión. ¿Querés estampar a más de un color y que todo coincida como debe?</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <h4>Registro a varias tintas</h4>
+                    <p>Un taller técnico para entender cómo alinear colores y poder estampar diseños a varias tintas con precisión.</p>
+                    <a href="<?php echo home_url('/contacto'); ?>" class="link-arrow text-small">Anotarse <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
 
-            <!-- Curso 3 (Duplicate based on screenshot, but let's make it real based on text if needed, or leave it as the screenshot shows) -->
+            <!-- Curso 3 -->
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>INTRODUCCIÓN<br>A LA SERIGRAFÍA</h3>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Introducción">
+                    <h3>ACOMPAÑAMIENTO<br>1 A 1</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cursos/Portadas de cursos presenciales_Acompañamiento 1 a 1.jpg" alt="Acompañamiento 1 a 1">
                     <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 13:00</div>
+                    <div class="course-time">Personalizado</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Introducción a la serigrafía</h4>
-                    <p>El punto de partida. Aprendés todo el proceso desde cero y hacés tus primeras estampas. ¿Nunca estampaste? Este es el lugar para empezar.</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <h4>Acompañamiento 1 a 1</h4>
+                    <p>Clases particulares de acompañamiento. Incluye todos los niveles, preimpresión y guía para emprender.</p>
+                    <a href="<?php echo get_permalink(91); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
 
@@ -87,31 +84,36 @@ get_header(); ?>
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>TINTAS<br>ESPECIALES</h3>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/78f9aa9776ccfaba35a17c5667ccde85740e3dec.png" alt="Tintas Especiales">
+                    <h3>CURSO<br>PERSONALIZADO</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/cursos/Portadas de cursos presenciales_Personalizado de serigrafía.jpg" alt="Curso Personalizado">
                     <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 13:00</div>
+                    <div class="course-time">4 clases</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Tintas especiales</h4>
-                    <p>Un espacio para experimentar con efectos, texturas y recursos que amplían las posibilidades. ¿Querés sumar herramientas y explorar nuevas formas de estampar?</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <h4>Introducción Personalizado</h4>
+                    <p>Un proceso de trabajo para desarrollar tu propia idea y llevarla a un producto estampado de forma personalizada.</p>
+                    <a href="<?php echo get_permalink(92); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
+        </div>
 
+        <h2 class="formacion-title">Modalidad Virtual</h2>
+
+        <div class="formacion-grid">
+            
             <!-- Curso 5 -->
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>PERSONALIZADO<br>DE SERIGRAFÍA</h3>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/c55c325c529a379d9b087d181d207cd946636daa.png" alt="Personalizado">
-                    <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 12:00</div>
+                    <h3>IMPRESIÓN<br>POR METRO</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Personalizado</h4>
-                    <p>Un proceso de trabajo durante un mes para desarrollar tu propia idea y llevarla a un producto estampado. ¿Tenés un diseño y querés convertirlo en algo real?</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <h4>Impresión por metro</h4>
+                    <p>Aprende las técnicas de impresión por metro continuo en serigrafía.</p>
+                    <a href="<?php echo get_permalink(93); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
 
@@ -119,15 +121,79 @@ get_header(); ?>
             <div class="course-card">
                 <div class="course-card-top">
                     <div class="course-label">+ curso +</div>
-                    <h3>TINTAS<br>ESPECIALES</h3>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/78f9aa9776ccfaba35a17c5667ccde85740e3dec.png" alt="Tintas Especiales">
-                    <div class="course-mode">PRESENCIAL</div>
-                    <div class="course-time">Sábado de 10:00 a 13:00</div>
+                    <h3>PREIMPRESIÓN<br>VIRTUAL</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
                 </div>
                 <div class="course-card-bottom">
-                    <h4>Tintas especiales</h4>
-                    <p>Un espacio para experimentar con efectos, texturas y recursos que amplían las posibilidades. ¿Querés sumar herramientas y explorar nuevas formas de estampar?</p>
-                    <a href="#" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                    <h4>Preimpresión</h4>
+                    <p>Cómo preparar los archivos, separaciones de color y quemado de pantallas.</p>
+                    <a href="<?php echo get_permalink(94); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                </div>
+            </div>
+
+            <!-- Curso 7 -->
+            <div class="course-card">
+                <div class="course-card-top">
+                    <div class="course-label">+ curso +</div>
+                    <h3>GUÍA PARA<br>EMPRENDER</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
+                </div>
+                <div class="course-card-bottom">
+                    <h4>Guía de Costos</h4>
+                    <p>Aprende a calcular tus costos y llevar adelante tu emprendimiento con éxito.</p>
+                    <a href="<?php echo get_permalink(95); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                </div>
+            </div>
+
+            <!-- Curso 8 -->
+            <div class="course-card">
+                <div class="course-card-top">
+                    <div class="course-label">+ curso +</div>
+                    <h3>NIVEL 1<br>VIRTUAL</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/5b99b820592c1a2eceb08a83cb6898964e9b2804.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
+                </div>
+                <div class="course-card-bottom">
+                    <h4>Nivel 1</h4>
+                    <p>La introducción a la serigrafía desde la comodidad de tu casa.</p>
+                    <a href="<?php echo get_permalink(96); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                </div>
+            </div>
+            
+            <!-- Curso 9 -->
+            <div class="course-card">
+                <div class="course-card-top">
+                    <div class="course-label">+ curso +</div>
+                    <h3>NIVEL 2<br>VIRTUAL</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/fe2242eb1ac0c07f171fdce0f83f810f223e988e.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
+                </div>
+                <div class="course-card-bottom">
+                    <h4>Nivel 2 Registros</h4>
+                    <p>Registros a varias tintas de forma virtual, profundizando la técnica.</p>
+                    <a href="<?php echo get_permalink(97); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
+                </div>
+            </div>
+
+            <!-- Curso 10 -->
+            <div class="course-card">
+                <div class="course-card-top">
+                    <div class="course-label">+ curso +</div>
+                    <h3>TODO INCLUIDO<br>VIRTUAL</h3>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/78f9aa9776ccfaba35a17c5667ccde85740e3dec.png" alt="Virtual">
+                    <div class="course-mode">VIRTUAL</div>
+                    <div class="course-time">A tu ritmo</div>
+                </div>
+                <div class="course-card-bottom">
+                    <h4>Todo incluido</h4>
+                    <p>El paquete completo virtual para aprender absolutamente todo.</p>
+                    <a href="<?php echo get_permalink(98); ?>" class="link-arrow text-small">Ver este curso <span class="arrow-icon">&rarr;</span></a>
                 </div>
             </div>
 

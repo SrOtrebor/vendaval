@@ -265,3 +265,35 @@ function vendaval_pack_custom_price_meta() {
     }
 }
 
+
+
+/* VENDAVAL: Tutor LMS Multi-course Enrollment Mapping */
+add_action( 'woocommerce_order_status_completed', 'vendaval_tutor_multi_enrollment', 10, 1 );
+function vendaval_tutor_multi_enrollment( $order_id ) {
+    if ( ! function_exists('tutor_utils') ) return;
+    $order = wc_get_order( $order_id );
+    $user_id = $order->get_user_id();
+    if ( ! $user_id ) return;
+    
+    $product_course_map = [
+        89 => [83, 85, 86],
+        90 => [84],
+        91 => [83, 84, 85, 86],
+        92 => [83, 85, 86],
+        93 => [87],
+        94 => [85],
+        95 => [86],
+        96 => [83],
+        97 => [84],
+        98 => [83, 84, 85, 86, 87]
+    ];
+    
+    foreach ( $order->get_items() as $item_id => $item ) {
+        $product_id = $item->get_product_id();
+        if ( isset( $product_course_map[$product_id] ) ) {
+            foreach ( $product_course_map[$product_id] as $course_id ) {
+                tutor_utils()->do_enroll( $course_id, $order_id, $user_id );
+            }
+        }
+    }
+}
