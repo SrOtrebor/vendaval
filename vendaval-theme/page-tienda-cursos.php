@@ -34,7 +34,7 @@ get_header(); ?>
         <div class="vendaval-woo-grid">
             <?php
             // Use WooCommerce shortcode to display products from 'packs-cursos' category
-            echo do_shortcode('[products category="packs-cursos" columns="3" orderby="date" order="ASC"]');
+            echo do_shortcode('[products category="packs-cursos" columns="3" orderby="date" order="ASC" cache="false"]');
             ?>
         </div>
     </div>
