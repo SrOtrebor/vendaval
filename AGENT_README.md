@@ -26,11 +26,11 @@
 Tu objetivo principal ahora es **dar vida a las funcionalidades dinámicas (Tienda, Cursos, Formularios)** respetando estrictamente el diseño de la web y el framework del Custom Theme que dejamos preparado:
 
 1. **Tienda (WooCommerce):**
-   - El plugin ya está. Falta estilizar el frontend (catálogo, producto individual, carrito, checkout).
+   - El plugin ya está. Se estilizó el frontend de "Packs" forzando visibilidad de títulos (`pack-top`) y adaptando los slugs de categoría a `packs-de-cursos` y `packs-cursos`.
    - Debes sobrescribir o limpiar las clases/diseño por defecto de WooCommerce usando el CSS del proyecto y la fuente *Instrument Sans*. La meta es que se vea integrado al diseño pixel-perfect.
 2. **Campus / E-Learning (Tutor LMS):**
-   - El plugin Tutor LMS está instalado.
-   - Debes configurarlo y asegurarte de que las plantillas de cursos (`archive-course.php`, `single-course.php`) hereden el diseño global de Vendaval (colores, tipografía, menú, footer).
+   - El plugin Tutor LMS está instalado y con sus estilos globales adaptados (color primario violeta `#334766`, tipografía `Instrument Sans`, y fix de padding para no pisar el Header).
+   - Se inyectó un filtro en `functions.php` para forzar la traducción al español de las cadenas clave de Tutor LMS.
 3. **Formularios de Contacto:**
    - Actualmente hay HTML estático. Reemplázalo por integraciones de plugins dinámicos (WPForms o Contact Form 7), asegurándote de inyectar las clases CSS para que visualmente no se rompa nada.
 

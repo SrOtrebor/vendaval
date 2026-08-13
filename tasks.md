@@ -10,12 +10,12 @@ El trabajo que hicimos hoy fue el paso más difícil y crítico: transformar los
 - [ ] **Plantillas de Páginas Estáticas:** Convertir el HTML limpio de `HomeContent`, `NosotrasContent`, `ElTallerContent` en plantillas de página (`page-home.php`, `page-nosotras.php`) dentro de WordPress.
 
 ## FASE 2: Integración de Tienda (WooCommerce)
-- [ ] **Instalación:** Configurar WooCommerce en el servidor de WordPress.
-- [ ] **Estilización (Theming):** Sobrescribir los estilos nativos de WooCommerce (botones, grillas de productos, carrito) usando nuestro `index.css` y la tipografía `Instrument Sans` para que el e-commerce luzca exactamente como el diseño de Figma.
+- [x] **Instalación:** Configurar WooCommerce en el servidor de WordPress.
+- [x] **Estilización (Theming):** Sobrescribir los estilos nativos de WooCommerce (botones, grillas de productos, carrito) usando nuestro `index.css` y la tipografía `Instrument Sans` para que el e-commerce luzca exactamente como el diseño de Figma.
 
 ## FASE 3: Integración del Campus (E-learning)
-- [ ] **Selección de Plugin LMS:** Instalar LearnDash, Tutor LMS o Sensei.
-- [ ] **Personalización Visual:** Asegurarnos de que las páginas de los cursos, lecciones y el perfil del alumno hereden el diseño global de la web (Header, Footer, colores, tipografía).
+- [x] **Selección de Plugin LMS:** Instalar LearnDash, Tutor LMS o Sensei.
+- [x] **Personalización Visual:** Asegurarnos de que las páginas de los cursos, lecciones y el perfil del alumno hereden el diseño global de la web (Header, Footer, colores, tipografía).
 
 ## FASE 4: Funcionalidad y SEO
 - [ ] **Formularios de Contacto:** Reemplazar el formulario estático de Figma por un plugin como Contact Form 7 o WPForms, estilizado con nuestro CSS.
