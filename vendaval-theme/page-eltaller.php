@@ -13,7 +13,7 @@ get_header(); ?>
         </div>
         <div class="container" style="position: relative; height: 100%; display: flex; align-items: center; z-index: 2;">
             <div class="contacto-hero-text">
-                <h2 style="max-width: 900px; text-transform: none;">Diseñar y producir estampas es tomar decisiones sobre materia, técnica y sentido.</h2>
+                <h2 style="max-width: 900px; text-transform: none;">Diseñar y producir estampas<br>es tomar decisiones sobre<br>materia, técnica y sentido.</h2>
             </div>
         </div>
     </div>
