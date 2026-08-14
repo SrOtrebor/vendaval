@@ -36,13 +36,16 @@ get_header();
         <div class="two-col-grid section-margin">
             <!-- Producción -->
             <div class="info-card">
-                <div class="image-wrapper">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/producción.jpg" alt="Producción">
-                    <div class="image-overlay">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
-                        <span>conocé más</span>
+                <a href="<?php echo esc_url(home_url('/el-taller/')); ?>" style="display:block; text-decoration:none;">
+                    <div class="image-wrapper">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/producción.jpg" alt="Producción">
+                        <div class="image-overlay">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
+                            <span>conocé más</span>
+                        </div>
                     </div>
-                </div>
+                </a>
+
                 <div class="info-card-text">
                     <h3 class="text-small">Producción</h3>
                     <p class="text-body-small">Acompañamos marcas, agencias y proyectos que necesitan más que ejecución: criterio técnico, diálogo y decisiones compartidas. Estampamos y diseñamos piezas con la serigrafía como corazón, con intención y método para que cada proyecto sea único y memorable.</p>
@@ -51,13 +54,15 @@ get_header();
 
             <!-- Formación -->
             <div class="info-card">
-                <div class="image-wrapper">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/formacion.jpg" alt="Formación">
-                    <div class="image-overlay">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
-                        <span>conocé más</span>
+                <a href="<?php echo esc_url(home_url('/formacion/')); ?>" style="display:block; text-decoration:none;">
+                    <div class="image-wrapper">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/portadas/formacion.jpg" alt="Formación">
+                        <div class="image-overlay">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/figma_assets/cad94847cd0711f9a17dd413f021e31ca2bacbeb.svg" alt="Star" style="width: 80px; height: 80px; flex-shrink: 0; object-fit: contain; margin-bottom: 10px;">
+                            <span>conocé más</span>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="info-card-text">
                     <h3 class="text-small">Formación</h3>
                     <p class="text-body-small">Formamos desde el oficio, no desde la receta.<br>Aprender en Vendaval es comprender el proceso, no solo la técnica.<br>Nos encanta poder transmitir el amor que tenemos por lo que hacemos y acompañarte en el desarrollo de tu propio proyecto.</p>

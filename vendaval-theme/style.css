@@ -369,6 +369,7 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
 }
 .image-overlay {
   position: absolute;
@@ -384,6 +385,7 @@ ul { list-style: none; }
   transition: opacity 0.3s;
 }
 .image-wrapper:hover .image-overlay { opacity: 1; }
+.image-wrapper:hover img { filter: grayscale(100%); }
 .info-card-text h3 {
   margin-bottom: 8px;
   font-weight: 600;
@@ -1856,4 +1858,337 @@ select.form-control {
 .tutor-page-title,
 .tutor-dashboard-header h1 {
   font-family: var(--font-main) !important;
+}
+
+/* ==========================================================================
+   WOOCOMMERCE SINGLE PRODUCT VENDAVAL STYLES
+   ========================================================================== */
+.product-single-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+@media (max-width: 768px) {
+    .product-single-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Product Image Gallery */
+.product-gallery-col .woocommerce-product-gallery__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.product-gallery-col .flex-control-nav {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+.product-gallery-col .flex-control-nav img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.product-gallery-col .flex-control-nav img:hover {
+    opacity: 0.8;
+}
+
+/* Prices */
+.product-summary-col .price {
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+/* Variation Selects */
+.product-summary-col table.variations {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+    border-spacing: 0;
+}
+.product-summary-col table.variations td.label {
+    padding-right: 15px;
+    padding-bottom: 15px;
+    vertical-align: middle;
+    font-family: var(--font-main);
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+.product-summary-col table.variations td.value {
+    padding-bottom: 15px;
+}
+.product-summary-col table.variations select {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="10" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 5 5-5z" fill="%23000"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+.product-summary-col table.variations select:focus {
+    outline: none;
+    border-color: #000;
+}
+.product-summary-col .reset_variations {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
+/* Quantity Input */
+.product-summary-col .quantity {
+    display: inline-block;
+    margin-right: 15px;
+}
+.product-summary-col .quantity input.qty {
+    width: 70px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    text-align: center;
+    font-size: 1rem;
+}
+.product-summary-col .quantity input.qty:focus {
+    outline: none;
+}
+
+/* Add to Cart Button */
+.product-summary-col button.single_add_to_cart_button {
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    border: 1px solid var(--border-color);
+    padding: 12px 30px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 50px;
+}
+.product-summary-col button.single_add_to_cart_button:hover {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* Disabled Button state for variations not selected */
+.product-summary-col button.single_add_to_cart_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Tabs */
+.woocommerce-tabs {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+}
+.woocommerce-tabs ul.tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.woocommerce-tabs ul.tabs li {
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+.woocommerce-tabs ul.tabs li.active {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+.woocommerce-tabs ul.tabs li a {
+    color: inherit;
+    text-decoration: none;
+}
+.woocommerce-tabs .panel h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* VENDAVAL PRODUCT SINGLE RE-STYLING (FIGMA MATCH) */
+.woocommerce div.product form.cart .variations {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.woocommerce div.product form.cart .variations th {
+    display: block;
+    text-align: left;
+    padding: 0 0 5px 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-black);
+}
+.woocommerce div.product form.cart .variations td {
+    display: block;
+    padding: 0 0 15px 0;
+}
+.woocommerce div.product form.cart .variations select,
+.woocommerce div.product form.cart .quantity input.qty {
+    width: 100%;
+    background-color: #dfdfdf;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--color-black);
+    appearance: none;
+    outline: none;
+}
+/* Fake dropdown arrow for selects */
+.woocommerce div.product form.cart .variations td.value {
+    position: relative;
+}
+.woocommerce div.product form.cart .variations td.value::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* Make Quantity block match the variations */
+.woocommerce div.product form.cart .single_variation_wrap {
+    margin-top: 10px;
+}
+.woocommerce div.product form.cart .woocommerce-variation-add-to-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.woocommerce div.product form.cart .quantity {
+    width: 100%;
+    margin: 0 !important;
+    position: relative;
+}
+.woocommerce div.product form.cart .quantity::before {
+    content: 'Cantidad';
+    display: block;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--color-black);
+}
+/* Fake dropdown arrow for quantity too, so it looks like the design */
+.woocommerce div.product form.cart .quantity::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 48px;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* Add to Cart Button */
+.woocommerce div.product form.cart .button {
+    width: 100%;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    padding: 18px 24px !important;
+    font-family: var(--font-primary) !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    transition: all 0.3s ease;
+}
+.woocommerce div.product form.cart .button:hover {
+    background-color: #333333 !important;
+}
+
+/* Single product title and price spacing */
+.woocommerce div.product .product_title {
+    font-size: 42px !important;
+    margin-bottom: 10px !important;
+}
+.woocommerce div.product p.price {
+    font-family: var(--font-headings) !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: var(--color-black) !important;
+    margin-bottom: 30px !important;
+}
+.woocommerce-variation-price .price {
+    font-family: var(--font-headings) !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: var(--color-black) !important;
+    margin-bottom: 20px !important;
+}
+.woocommerce-variation-availability { display: none !important; }
+.reset_variations { display: none !important; }
+
+/* Hide number input arrows to make it look like a select */
+.woocommerce div.product form.cart .quantity input.qty::-webkit-outer-spin-button,
+.woocommerce div.product form.cart .quantity input.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.woocommerce div.product form.cart .quantity input.qty[type=number] {
+    -moz-appearance: textfield;
+}
+/* FIX: Remove native select arrows cross-browser */
+.woocommerce div.product form.cart .variations select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: none !important; /* Removes default arrow in some browsers */
+}
+
+/* FIX: Force product gallery to take full width of my grid column */
+.woocommerce div.product div.images.woocommerce-product-gallery {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+}
+.woocommerce div.product div.images.woocommerce-product-gallery img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+}
+.product-single-grid {
+    gap: 40px !important; /* A bit more breathing room like Figma */
+}
+/* Fix Tutor LMS blue header shape */
+.tutor-dashboard-header {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+.tutor-dashboard-header-cover {
+    display: none !important;
 }

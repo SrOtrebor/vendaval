@@ -229,7 +229,7 @@ function vendaval_exclude_packs_from_shop( $q ) {
     );
     $q->set( 'tax_query', $tax_query );
 }
-add_action( 'woocommerce_product_query', 'vendaval_exclude_packs_from_shop' );
+// add_action('woocommerce_product_query', 'vendaval_exclude_packs_from_shop');
 
 /**
  * LÃ­mite de 12 proyectos por pÃ¡gina en el archivo de Proyectos
@@ -320,6 +320,32 @@ function vendaval_translate_tutor_lms( $translated_text, $text, $domain ) {
             case 'Enrolled Courses': return 'Mis Cursos';
             case 'Active Courses': return 'Cursos Activos';
             case 'Completed Courses': return 'Cursos Completados';
+        }
+    }
+    return $translated_text;
+}
+// Quick translations for Tutor LMS
+add_filter('gettext', 'vendaval_translate_tutor', 10, 3);
+function vendaval_translate_tutor($translated_text, $text, $domain) {
+    if ($domain === 'tutor' || $domain === 'tutor-lms') {
+        switch ($text) {
+            case 'Please %s to view this page': return 'Por favor, %s para ver esta página';
+            case 'Sign-In': return 'iniciá sesión';
+            case 'Dashboard': return 'Campus';
+            case 'Enrolled Courses': return 'Cursos inscriptos';
+            case 'Active Courses': return 'Cursos activos';
+            case 'Completed Courses': return 'Cursos completados';
+            case 'Logout': return 'Cerrar sesión';
+            case 'Settings': return 'Ajustes';
+            case 'My Profile': return 'Mi Perfil';
+            case 'Reviews': return 'Reseñas';
+            case 'Order History': return 'Historial de compras';
+            case 'Q & A': return 'Preguntas y Respuestas';
+            case 'My Quiz Attempts': return 'Mis cuestionarios';
+            case 'Question & Answer': return 'Preguntas y respuestas';
+            case 'Hello': return 'Hola';
+            case 'Quiz Attempts': return 'Intentos de cuestionario';
+            case 'Wishlist': return 'Lista de deseos';
         }
     }
     return $translated_text;

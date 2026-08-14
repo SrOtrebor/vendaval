@@ -15,6 +15,13 @@ acf_add_local_field_group(array(
             'instructions' => 'Escribe una etiqueta por línea (ej: Branding, Website, Logo).',
         ),
         array(
+            'key' => 'field_instagram_link',
+            'label' => 'Link de Instagram',
+            'name' => 'proyecto_instagram',
+            'type' => 'url',
+            'instructions' => 'Pega aquí el enlace del Reel o Post de Instagram para mostrar el botón "Ver más en Instagram".',
+        ),
+        array(
             'key' => 'field_hero_desktop',
             'label' => 'Hero (Escritorio)',
             'name' => 'proyecto_hero_desktop',

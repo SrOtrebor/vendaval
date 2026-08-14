@@ -55,7 +55,7 @@ get_header(); ?>
                     echo '</div>';
                 } else {
                     echo '<div class="curso-price">Gratis</div>';
-                    tutor_course_enroll_button();
+                    if (function_exists('tutor_course_enroll_button')) tutor_course_enroll_button(); else tutor_load_template('single.course.enrolled-box');
                 }
                 ?>
             </div>

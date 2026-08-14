@@ -158,7 +158,7 @@ $instagram_link = get_post_meta(get_the_ID(), 'proyecto_instagram', true);
                         <a href="<?php the_permalink(); ?>" style="display:block;">
                             <img src="<?php echo esc_url($thumb); ?>" alt="<?php the_title_attribute(); ?>">
                         </a>
-                        <a href="<?php the_permalink(); ?>" class="link-arrow text-body-small" style="margin-top: 15px;">Ver proyecto <span class="arrow-icon">&rarr;</span></a>
+                        <h3 class="text-body" style="margin-top: 15px; margin-bottom: 5px; font-size: 18px;"><a href="<?php the_permalink(); ?>" style="text-decoration: none; color: inherit;"><?php the_title(); ?></a></h3>                        <a href="<?php $ig = get_post_meta(get_the_ID(), 'proyecto_instagram', true); echo $ig ? esc_url($ig) : get_permalink(); ?>" target="<?php echo $ig ? '_blank' : '_self'; ?>" class="link-arrow text-body-small" style="margin-top: 5px;">Ver en Instagram <span class="arrow-icon">&rarr;</span></a>
                     </div>
                     <?php
                 endwhile;

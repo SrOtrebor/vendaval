@@ -5,18 +5,28 @@ Dado el requerimiento de negocio de usar **100% WordPress** para aprovechar solu
 El trabajo que hicimos hoy fue el paso más difícil y crítico: transformar los diseños de Figma en HTML y CSS responsivo y limpio. Ahora usaremos ese código como la "piel" de nuestro WordPress.
 
 ## FASE 1: Creación del Tema de WordPress (Theme)
-- [ ] **Estructura Base:** Crear la estructura de un tema de WordPress (`style.css`, `index.php`, `functions.php`).
-- [ ] **Header y Footer Globales:** Tomar nuestro componente `<Navbar />` y nuestro CSS global, y pasarlos a `header.php` y `footer.php` para que WordPress los inyecte en todas las páginas.
-- [ ] **Plantillas de Páginas Estáticas:** Convertir el HTML limpio de `HomeContent`, `NosotrasContent`, `ElTallerContent` en plantillas de página (`page-home.php`, `page-nosotras.php`) dentro de WordPress.
+- [x] **Estructura Base:** Crear la estructura de un tema de WordPress (`style.css`, `index.php`, `functions.php`).
+- [x] **Header y Footer Globales:** Tomar nuestro componente `<Navbar />` y nuestro CSS global, y pasarlos a `header.php` y `footer.php` para que WordPress los inyecte en todas las páginas.
+- [x] **Plantillas de Páginas Estáticas:** Convertir el HTML limpio de `HomeContent`, `NosotrasContent`, `ElTallerContent` en plantillas de página (`page-home.php`, `page-nosotras.php`) dentro de WordPress.
+- [x] **Migración a Producción:** Subir el sitio local al servidor de DonWeb sorteando los límites de subida y problemas de timeout.
 
 ## FASE 2: Integración de Tienda (WooCommerce)
 - [x] **Instalación:** Configurar WooCommerce en el servidor de WordPress.
+<<<<<<< Updated upstream
 - [x] **Estilización (Theming):** Sobrescribir los estilos nativos de WooCommerce (botones, grillas de productos, carrito) usando nuestro `index.css` y la tipografía `Instrument Sans` para que el e-commerce luzca exactamente como el diseño de Figma.
 
 ## FASE 3: Integración del Campus (E-learning)
 - [x] **Selección de Plugin LMS:** Instalar LearnDash, Tutor LMS o Sensei.
 - [x] **Personalización Visual:** Asegurarnos de que las páginas de los cursos, lecciones y el perfil del alumno hereden el diseño global de la web (Header, Footer, colores, tipografía).
+=======
+- [ ] **Estilización (Theming):** Sobrescribir los estilos nativos de WooCommerce (botones, grillas de productos, carrito) usando nuestro `index.css` y la tipografía `Instrument Sans` para que el e-commerce luzca exactamente como el diseño de Figma.
+
+## FASE 3: Integración del Campus (E-learning)
+- [ ] **Selección de Plugin LMS:** Instalar LearnDash, Tutor LMS o Sensei. (Se observa instalación de Tutor LMS en el panel).
+- [ ] **Personalización Visual:** Asegurarnos de que las páginas de los cursos, lecciones y el perfil del alumno hereden el diseño global de la web (Header, Footer, colores, tipografía).
+>>>>>>> Stashed changes
 
 ## FASE 4: Funcionalidad y SEO
 - [ ] **Formularios de Contacto:** Reemplazar el formulario estático de Figma por un plugin como Contact Form 7 o WPForms, estilizado con nuestro CSS.
-- [ ] **Gestión de Menús:** Conectar el `header.php` con el sistema nativo de menús de WordPress (`wp_nav_menu`) para que el cliente pueda cambiar los enlaces desde el panel de administrador.
+- [x] **Gestión de Menús:** Conectar el `header.php` con el sistema nativo de menús de WordPress (`wp_nav_menu`) para que el cliente pueda cambiar los enlaces desde el panel de administrador. Además, se construyó un menú móvil con JavaScript nativo para asegurar la responsividad.
+- [x] **Modo Próximamente (Mantenimiento):** Configurar e instalar SeedProd para restringir el acceso público al sitio web durante la fase de desarrollo, superando el caché del servidor de DonWeb.
