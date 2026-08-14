@@ -2192,3 +2192,7 @@ select.form-control {
 .tutor-dashboard-header-cover {
     display: none !important;
 }
+
+
+/* Fix Campus Title */
+.tutor-dashboard-header .tutor-fs-5, .tutor-dashboard-title, .tutor-wrap .tutor-fs-5 { font-family: 'Instrument Sans', sans-serif !important; color: #334766 !important; }
